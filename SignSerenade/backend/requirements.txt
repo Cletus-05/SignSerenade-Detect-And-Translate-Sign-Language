@@ -1,0 +1,9 @@
+flask==2.3.3
+flask-cors==4.0.0
+numpy==1.24.3
+opencv-python-headless==4.8.0.76
+ultralytics==8.3.36
+gunicorn
+
+# PyTorch CPU (prebuilt wheel)
+torch==2.0.1+cpu ; platform_system=="Linux"
