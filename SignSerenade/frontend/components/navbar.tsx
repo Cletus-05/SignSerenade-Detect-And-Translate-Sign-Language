@@ -1,15 +1,15 @@
 "use client"
 
-import type React from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { BookOpen, ChevronDown, Info, Languages, Menu, Settings, Users, X } from "lucide-react"
+import { useEffect, useState } from "react"
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
-import { Info, Users, Languages, BookOpen, Settings, Menu, X, ChevronDown } from "lucide-react"
-import Image from "next/image"
 import BackendConnectionChecker from "./backend-connection-checker"
 import DetectionDebugger from "./detection_debugger"
+import Image from "next/image"
+import Link from "next/link"
+import type React from "react"
+import { usePathname } from "next/navigation"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -59,8 +59,6 @@ export default function Navbar() {
   }, [isOpen])
 
   const links = [
-    { href: "/about", label: "About Us", icon: <Info className="w-5 h-5" /> },
-    { href: "/team", label: "Meet the Team", icon: <Users className="w-5 h-5" /> },
     { href: "/translate", label: "Translate", icon: <Languages className="w-5 h-5" /> },
     { href: "/learn", label: "Learning Platform", icon: <BookOpen className="w-5 h-5" /> },
   ]
